@@ -1,0 +1,46 @@
+// Добавление клиентов
+db.add_client("John Doe", "john.doe@example.com", "123456789");
+db.add_client("Jane Smith", "jane.smith@example.com", "987654321");
+
+// Добавление сделок
+db.add_deal("Sale 1", 100.0, "New");
+db.add_deal("Sale 2", 200.0, "Pending");
+
+// Добавление задач
+db.add_task("Task 1", "Description for task 1", "New", "2023-05-10", "John Doe");
+db.add_task("Task 2", "Description for task 2", "In progress", "2023-05-15", "Jane Smith");
+
+// Вывод информации о клиентах
+std::cout << "Clients:" << std::endl;
+db.print_clients();
+
+// Вывод информации о сделках
+std::cout << "Deals:" << std::endl;
+db.print_deals();
+
+// Вывод информации о задачах
+std::cout << "Tasks:" << std::endl;
+db.print_tasks();
+// Добавление клиентов
+db.add_client("John Doe", "john.doe@example.com", "123456789");
+db.add_client("Jane Smith", "jane.smith@example.com", "987654321");
+
+// Добавление сделок
+db.add_deal("Sale 1", 100.0, "New", "John Doe");
+db.add_deal("Sale 2", 200.0, "Pending", "John Doe");
+db.add_deal("Sale 3", 300.0, "Completed", "Jane Smith");
+
+// Вывод информации о клиентах
+std::cout << "Clients:" << std::endl;
+db.print_clients();
+
+// Вывод информации о сделках
+std::cout << "Deals:" << std::endl;
+db.print_deals();
+
+// Вывод информации о клиентах и связанных сделках
+std::cout << "Clients with deals:" << std::endl;
+db.print_clients_with_deals();
+
+return 0;
+
